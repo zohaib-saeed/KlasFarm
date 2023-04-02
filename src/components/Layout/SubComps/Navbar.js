@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <React.Fragment>
       {/* Menu => Desktop (Above 1024px) */}
-      <div className="w-full max-w-[1440px] px-6 py-[6px] lg:py-[16px] hidden lg:flex items-center justify-between gap-6 mxl:gap-8">
+      <div className="w-full max-w-[1440px] px-6 py-[6px] lg:py-[16px] hidden lg:flex items-center justify-between gap-4 sxl:gap-5 mxl:gap-6">
         {/* Logo  */}
         <Link href="/">
-          <div className="w-[230px] lg:w-[260px]  h-[110px] lg:h-[135px]  flex items-center justify-center relative transition-all">
+          <div className="w-[170px] sxl:w-[190px] mxl:w-[210px] xl:w-[220px] h-[90px] mxl:h-[120px] xl:h-[125px] flex items-center justify-center relative transition-all">
             <Image
               src="/images/logo-main.svg"
               alt=""
@@ -28,22 +28,25 @@ const Navbar = () => {
         </Link>
         {/* Nav Links  */}
         <div className="w-full flex items-center justify-center gap-3 sxl:gap-4">
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px]  font-medium cursor-pointer">
-            O nás
-          </div>
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px] font-medium cursor-pointer">
+          {/* About Us  */}
+          <Link href="/about-us">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+              O nás
+            </div>
+          </Link>
+          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
             Ponúkame
           </div>
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px]  font-medium cursor-pointer">
+          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Kontakty
           </div>
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px]  font-medium cursor-pointer">
+          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Galéria
           </div>
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px]  font-medium cursor-pointer">
+          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Kukuričné bludisko
           </div>
-          <div className="text-[18px] sxl:text-[20px] mxl:text-[22px] xl:text-[25px] font-medium cursor-pointer">
+          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
             Aktuality
           </div>
         </div>
@@ -94,9 +97,9 @@ const Navbar = () => {
         </div>
       </div>
       {/* Menu => Small Screens (Below 1024px) */}
-      <div className="w-full flex lg:hidden items-center justify-between px-2 xs:px-3 sm:px-4 md:px-5 py-[6px]">
+      <div className="w-full flex lg:hidden items-center justify-between px-2 xs:px-3 sm:px-4 md:px-5 py-[8px]">
         {/* Logo  */}
-        <div className="w-[150px] xs:w-[170px] md:w-[180px] h-[90px] xs:h-[110px] md:h-[140px]  flex items-center justify-center relative  trasition-all">
+        <div className="w-[170px] h-[90px]   flex items-center justify-center relative  trasition-all">
           <Image
             src="/images/logo-main.svg"
             alt=""

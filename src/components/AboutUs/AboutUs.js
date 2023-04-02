@@ -50,7 +50,7 @@ const AboutUs = () => {
   return (
     <div
       ref={sliderRef}
-      className="w-full max-w-[1440px] flex flex-col items-center justify-start"
+      className="w-full max-w-[1440px] flex flex-col items-center justify-start px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6"
     >
       {/* Slider  */}
       <div className="w-full">
@@ -83,35 +83,60 @@ const AboutUs = () => {
         </Slider>
       </div>
       {/* Main Content  */}
-      <div className="w-full grid grid-cols-[0.7fr_1.3fr] gap-6 py-12">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] mxl:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-10 mxl:gap-12 py-12">
         {/* Col 1 */}
-        <div></div>
+        <div className="w-full flex items-center justify-start">
+          <div className="w-full  xs:max-w-[85%] sm:max-w-[75%] mdl:max-w-[60%] lg:max-w-none h-[370px] vsm:h-[500px] sm:h-[550px] mdl:h-[600px] flex items-center justify-center relative">
+            <Image
+              src="/images/about-us/about-us-main.png"
+              alt=""
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
         {/* Col 2 */}
-        <ul className="w-full text-[22px] flex flex-col items-center justify-start gap-5 list-outside  list-disc text-black">
-          <li>
-            V roku 2012 vznikla v{" "}
-            <span className="font-bold">srdci Slovenska</span> spoločnosť{" "}
-            <span className="font-bold">Klas FARM</span> zameraná na{" "}
-            <span className="font-bold">TRADIČNÉ poľnohospodárstvo</span>, s
-            orientáciou na EKO produkciu, hlavne pri chove hovädzieho dobytka a
-            oviec, ktoré súd hlavným symbolom Slovenského poľnohospodárstva.
-            História poľnohospodárstva, ako aj podmienky naň, sú v tejto oblasti
-            ideálne, a z toho práve ťažíme aj my.{" "}
-            <span className="font-bold">MODERNÉ riadenie</span>a zavádzanie
-            nových trendov je našou vysokou prioritou so zachovaním tradície a s
-            ohľadom na prírodu , z čoho vznikla aj naša firemná filozofia
-            „Tradičné poľnohospodárstvo s moderným riadením“.
-          </li>
-          <li>
-            Cieľom je využiť poznatky našich predkov a ponechať pri pestovaní a
-            chove dobytka rokmi overené postupy, ktoré sú perfektne doplnené o
-            najmodernejšie činnosti riadenia. Práve toto spojenie môže priniesť
-            opätovný rozvoj poľnohospodárstva na území stredného Slovenska a
-            následne aj vlastnú{" "}
-            <span className="font-bold">surovinovú sebestačnosť</span> pre
-            slovenské podniky, kam práve naša produkcia putuje.
-          </li>
-        </ul>
+        <div className="w-full flex flex-col items-start justify-start">
+          <ul className="w-full text-[18px] vsm:text-[20px] mxl:text-[22px] flex flex-col items-start justify-start px-4 vsm:px-5 mdl:px-6 lg:px-0 gap-3 mxl:gap-5 list-outside  list-disc text-black">
+            <li>
+              V roku 2012 vznikla v{" "}
+              <span className="font-bold">srdci Slovenska</span> spoločnosť{" "}
+              <span className="font-bold">Klas FARM</span> zameraná na{" "}
+              <span className="font-bold">TRADIČNÉ poľnohospodárstvo</span>, s
+              orientáciou na EKO produkciu, hlavne pri chove hovädzieho dobytka
+              a oviec, ktoré súd hlavným symbolom Slovenského poľnohospodárstva.
+              História poľnohospodárstva, ako aj podmienky naň, sú v tejto
+              oblasti ideálne, a z toho práve ťažíme aj my.{" "}
+              <span className="font-bold">MODERNÉ riadenie</span>a zavádzanie
+              nových trendov je našou vysokou prioritou so zachovaním tradície a
+              s ohľadom na prírodu , z čoho vznikla aj naša firemná filozofia
+              „Tradičné poľnohospodárstvo s moderným riadením“.
+            </li>
+            <li>
+              Cieľom je využiť poznatky našich predkov a ponechať pri pestovaní
+              a chove dobytka rokmi overené postupy, ktoré sú perfektne doplnené
+              o najmodernejšie činnosti riadenia. Práve toto spojenie môže
+              priniesť opätovný rozvoj poľnohospodárstva na území stredného
+              Slovenska a následne aj vlastnú{" "}
+              <span className="font-bold">surovinovú sebestačnosť</span> pre
+              slovenské podniky, kam práve naša produkcia putuje.
+            </li>
+            <li>
+              Odmenou za našu prácu je úsmev na vašich perách. Keďže aj vďaka
+              našej produkcii sa na vašom stole objaví vynikajúci slovenský
+              chlieb, či skvelá{" "}
+              <span className="font-bold">slovenská bryndza</span>.
+            </li>
+            <li>
+              Aj napriek neustálym výkyvom počasia, ktoré do podstatnej miery
+              ovplyvňujú chod spoločnosti, je pre nás každá situácia výzvou.
+              Pýšiť sa môžeme aj{" "}
+              <span className="font-bold">Bio certifikátom</span>, ktorý okrem
+              iného hovorí aj o tom, že naša produkcia podlieha veľmi prísnym
+              kritériám pri pestovaní, chove a následnom spracovaní.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
