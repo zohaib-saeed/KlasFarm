@@ -1,7 +1,13 @@
 import React from "react";
 
+import WeOffer from "@/components/WeOffer/WeOffer";
+
 const Index = () => {
-  return <React.Fragment>Index</React.Fragment>;
+  return (
+    <React.Fragment>
+      <WeOffer />
+    </React.Fragment>
+  );
 };
 
 export default Index;
