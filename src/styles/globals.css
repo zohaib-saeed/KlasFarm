@@ -7,3 +7,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.slick-dots {
+  bottom: 13px !important;
+}
+
+.slick-dots li {
+  margin: 0px 2px !important;
+}
+
+.slick-dots li button {
+  padding: 0px !important;
+  background-color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  font-size: 10px !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 10px !important;
+}
