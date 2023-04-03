@@ -23,12 +23,16 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
         </div>
         {/* Nav Links */}
         <div className="w-full flex flex-col items-center justify-center gap-3 ">
+          {/* About Us */}
           <Link href="/about-us">
             <div className="text-[18px] font-medium cursor-pointer">O nás</div>
           </Link>
-          <div className="text-[18px]  font-medium cursor-pointer">
-            Ponúkame
-          </div>
+          {/* We offer  */}
+          <Link href="/we-offer">
+            <div className="text-[18px]  font-medium cursor-pointer">
+              Ponúkame
+            </div>
+          </Link>
           <div className="text-[18px]  font-medium cursor-pointer">
             Kontakty
           </div>

@@ -34,9 +34,12 @@ const Navbar = () => {
               O nás
             </div>
           </Link>
-          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
-            Ponúkame
-          </div>
+          {/* We offer  */}
+          <Link href="/we-offer">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
+              Ponúkame
+            </div>
+          </Link>
           <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Kontakty
           </div>
