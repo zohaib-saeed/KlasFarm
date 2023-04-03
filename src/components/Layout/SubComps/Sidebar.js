@@ -46,9 +46,12 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
               Kukuričné bludisko
             </div>
           </Link>
-          <div className="text-[18px]  font-medium cursor-pointer">
-            Aktuality
-          </div>
+          {/* News  */}
+          <Link href="/news">
+            <div className="text-[18px]  font-medium cursor-pointer">
+              Aktuality
+            </div>
+          </Link>
         </div>
         {/* Social Links  */}
         <div className="flex items-center justify-end gap-[8px]">

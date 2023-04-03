@@ -55,9 +55,12 @@ const Navbar = () => {
               Kukuričné bludisko
             </div>
           </Link>
-          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
-            Aktuality
-          </div>
+          {/* News  */}
+          <Link href="/news">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
+              Aktuality
+            </div>
+          </Link>
         </div>
         {/* Social Links  */}
         <div className="flex items-center justify-end gap-[4px]">
