@@ -63,7 +63,7 @@ const WeOffer = () => {
               <ContentCard
                 headline={sectionsData[2].headline}
                 text={sectionsData[2].description}
-                email={sectionsData[3].email}
+                email={sectionsData[2].email}
               />
             </div>
             {/* Col 2  */}
@@ -130,7 +130,6 @@ const WeOffer = () => {
               <ContentCard
                 headline={sectionsData[6].headline}
                 text={sectionsData[6].description}
-                email={sectionsData[6].email}
               />
             </div>
             {/* Col 2  */}

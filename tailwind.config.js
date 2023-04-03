@@ -28,6 +28,7 @@ module.exports = {
       davyGrey: "#58595B",
       bianca: "#FAFAFA",
       fireBush: "#F7942A",
+      blue: "#0075FF",
     },
     extend: {
       fontFamily: {

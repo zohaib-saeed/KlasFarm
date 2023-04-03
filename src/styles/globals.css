@@ -52,7 +52,7 @@
 }
 
 /* Styling snackbar  */
-.MuiSnackbarContent-root {
+.connect-btn .MuiSnackbarContent-root {
   background-color: black;
   padding: 0px 0px;
   display: flex;
@@ -63,7 +63,25 @@
   overflow: hidden;
 }
 
-.MuiSnackbarContent-message {
+.connect-btn .MuiSnackbarContent-message {
+  padding: 0px;
+  border-radius: 3px !important;
+  overflow: hidden;
+}
+
+/* Styling snackbar  */
+.action-email .MuiSnackbarContent-root {
+  background-color: black;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: none !important;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.action-email .MuiSnackbarContent-message {
   padding: 0px;
   border-radius: 3px !important;
   overflow: hidden;

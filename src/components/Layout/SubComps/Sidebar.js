@@ -33,9 +33,12 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
               Ponúkame
             </div>
           </Link>
-          <div className="text-[18px]  font-medium cursor-pointer">
-            Kontakty
-          </div>
+          {/* Contacts  */}
+          <Link href="/contacts">
+            <div className="text-[18px]  font-medium cursor-pointer">
+              Kontakty
+            </div>
+          </Link>
           <div className="text-[18px]  font-medium cursor-pointer">Galéria</div>
           <div className="text-[18px]  font-medium cursor-pointer">
             Kukuričné bludisko

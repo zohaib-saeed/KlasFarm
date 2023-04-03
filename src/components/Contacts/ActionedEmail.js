@@ -3,7 +3,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Snackbar from "@mui/material/Snackbar";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
-const ConnectBtn = ({ email }) => {
+const ActionedEmail = ({ email }) => {
   const [openTooltip, setOpenTooltip] = useState(false);
   const [copied, setCopied] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -66,7 +66,7 @@ const ConnectBtn = ({ email }) => {
   };
 
   return (
-    <div className="connect-btn">
+    <div className="action-email">
       <Tooltip
         placement="top"
         leaveDelay={1500}
@@ -77,12 +77,15 @@ const ConnectBtn = ({ email }) => {
         title={<TooltipContent />}
         arrow
       >
-        <button
+        <div
           onClick={handleClick}
-          className="bg-fireBush text-white text-base vsm:text-[18px] md:text-[20px] mdl:text-[22px] lg:text-[25px] mxl:text-[30px] font-semibold py-[8px] vsm:py-[12px] lg:py-4 sxl:py-[19px] px-6 vsm:px-8 lg:px-10 rounded-3xl"
+          className="text-white text-[16px] xl:text-[18px] cursor-pointer"
         >
-          Kontaktovať
-        </button>
+          e-mail:
+          <span className="px-2 transition-all underline underline-offset-4 decoration-[1px] hover:bg-blue">
+            {email}
+          </span>
+        </div>
       </Tooltip>
       <Snackbar
         className="bg-black text-white text-[13px]  rounded-[3px]"
@@ -96,4 +99,4 @@ const ConnectBtn = ({ email }) => {
   );
 };
 
-export default ConnectBtn;
+export default ActionedEmail;

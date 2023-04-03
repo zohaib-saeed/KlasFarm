@@ -12,7 +12,7 @@ const ContentCard = ({ headline, text, email }) => {
           {text}
         </p>
       </div>
-      <ConnectBtn email={email} />
+      {email && <ConnectBtn email={email} />}
     </div>
   );
 };

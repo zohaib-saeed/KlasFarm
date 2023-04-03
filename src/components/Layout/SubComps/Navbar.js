@@ -40,9 +40,12 @@ const Navbar = () => {
               Ponúkame
             </div>
           </Link>
-          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
-            Kontakty
-          </div>
+          {/* Contacts  */}
+          <Link href="/contacts">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+              Kontakty
+            </div>
+          </Link>
           <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Galéria
           </div>
