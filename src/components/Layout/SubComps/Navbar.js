@@ -49,9 +49,12 @@ const Navbar = () => {
           <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
             Galéria
           </div>
-          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
-            Kukuričné bludisko
-          </div>
+          {/* Corn Maze  */}
+          <Link href="/corn-maze">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+              Kukuričné bludisko
+            </div>
+          </Link>
           <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
             Aktuality
           </div>
