@@ -26,11 +26,16 @@ module.exports = {
       white: "#fff",
       granite: "#818285",
       davyGrey: "#58595B",
+      bianca: "#FAFAFA",
+      fireBush: "#F7942A",
     },
     extend: {
       fontFamily: {
         sans: ["Montserrat", "Helvetica Neue", "Arial", "sans-serif"],
         mistral: ["Mistral", "cursive"],
+      },
+      dropShadow: {
+        "3xl": "0px 0px 7.5px 5px rgba(204, 204, 204, 0.2)",
       },
     },
   },
