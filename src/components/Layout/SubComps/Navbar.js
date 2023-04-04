@@ -59,7 +59,7 @@ const Navbar = () => {
           {/* About Us  */}
           <Link href="/about-us">
             <div
-              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "about-us" ? "font-semibold" : "font-medium"
               } cursor-pointer`}
             >
@@ -69,7 +69,7 @@ const Navbar = () => {
           {/* We offer  */}
           <Link href="/we-offer">
             <div
-              className={`we-offer text-[16px] relative hover:underline  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+              className={`we-offer hover:text-davyGrey transition-all text-[16px] relative hover:underline  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
                 activeTab === "we-offer" ? "font-semibold" : "font-medium"
               } cursor-pointer transition-all`}
             >
@@ -108,7 +108,7 @@ const Navbar = () => {
           {/* Contacts  */}
           <Link href="/contacts">
             <div
-              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "contacts" ? "font-semibold" : "font-medium"
               } cursor-pointer`}
             >
@@ -118,7 +118,7 @@ const Navbar = () => {
           {/* Gallery  */}
           <Link href="/gallery">
             <div
-              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "gallery" ? "font-semibold" : "font-medium"
               } cursor-pointer`}
             >
@@ -128,7 +128,7 @@ const Navbar = () => {
           {/* Corn Maze  */}
           <Link href="/corn-maze">
             <div
-              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "corn-maze" ? "font-semibold" : "font-medium"
               } cursor-pointer`}
             >
@@ -138,7 +138,7 @@ const Navbar = () => {
           {/* News  */}
           <Link href="/news">
             <div
-              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
                 activeTab === "news" ? "font-semibold" : "font-medium"
               } cursor-pointer`}
             >
