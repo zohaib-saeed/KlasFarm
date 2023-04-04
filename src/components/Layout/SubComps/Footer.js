@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Socials  */}
           <div className="flex flex-col items-start sm:items-end justify-center gap-[5px]">
             {/* => Facebook */}
-            <Link href="/">
+            <Link href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr">
               <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] relative flex items-center justify-center">
                 <Image
                   src="/icons/social/fb-white.svg"
@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
             </Link>
             {/* Instagram */}
-            <Link href="/">
+            <Link href="https://www.instagram.com/klas_farm_/">
               <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] relative flex items-center justify-center">
                 <Image
                   src="/icons/social/ig-white.svg"
@@ -78,7 +78,7 @@ const Footer = () => {
               </div>
             </Link>
             {/* Youtube  */}
-            <Link href="/">
+            <Link href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw">
               <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] relative flex items-center justify-center">
                 <Image
                   src="/icons/social/ytb-white.svg"

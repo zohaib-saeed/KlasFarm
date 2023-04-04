@@ -6,9 +6,6 @@ import { sectionsData } from "./sections-data";
 import SectionImage from "./SubComps/SectionImage/SectionImage";
 
 const WeOffer = () => {
-  const item1 = sectionsData[0];
-  const item2 = sectionsData[1];
-
   return (
     <div className="w-full max-w-[1440px] pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
       <div className="relative w-full">
@@ -27,7 +24,10 @@ const WeOffer = () => {
       <div className="w-full flex flex-col items-end justify-start">
         <div className="w-full max-w-[1280px] flex flex-col items-center justify-start gap-10">
           {/* Item 1  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="post-collection"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
@@ -42,7 +42,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 2  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="seed-production"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
               <SectionImage url={sectionsData[1].imgUrl} />
@@ -57,7 +60,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 3  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="products-sale"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
@@ -72,7 +78,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 4  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="cattle-sale"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
               <SectionImage url={sectionsData[3].imgUrl} />
@@ -87,7 +96,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 5  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="sheep-milk-sale"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
@@ -109,7 +121,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 6  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="agr-commodities"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
               <SectionImage url={sectionsData[5].imgUrl} />
@@ -124,7 +139,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 7 */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="ecological-agriculture"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
@@ -138,7 +156,10 @@ const WeOffer = () => {
             </div>
           </div>
           {/* Item 8  */}
-          <div className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24">
+          <div
+            id="mechanization"
+            className="w-full  grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] gap-5 md:gap-10 mdl:gap-16 lg:gap-24"
+          >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
               <SectionImage url={sectionsData[7].imgUrl} />

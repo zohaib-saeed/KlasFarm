@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu as MenuIcon } from "react-icons/fi";
@@ -6,10 +7,37 @@ import { BiSearch as SearchIcon } from "react-icons/bi";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   const toggleDrawer = () => {
     setOpenMenu((prevState) => !prevState);
   };
+
+  const preventDefaultClick = (event) => {
+    event.stopPropagation();
+  };
+
+  const [activeTab, setActiveTab] = useState("");
+
+  const handleActiveLinks = () => {
+    if (router.pathname === "/about-us") {
+      setActiveTab("about-us");
+    } else if (router.pathname.includes("/we-offer")) {
+      setActiveTab("we-offer");
+    } else if (router.pathname === "/contacts") {
+      setActiveTab("contacts");
+    } else if (router.pathname === "/gallery") {
+      setActiveTab("gallery");
+    } else if (router.pathname === "/news") {
+      setActiveTab("news");
+    } else if (router.pathname === "/corn-maze") {
+      setActiveTab("corn-maze");
+    }
+  };
+
+  useEffect(() => {
+    handleActiveLinks();
+  }, [router]);
 
   return (
     <React.Fragment>
@@ -30,37 +58,90 @@ const Navbar = () => {
         <div className="w-full flex items-center justify-center gap-3 sxl:gap-4">
           {/* About Us  */}
           <Link href="/about-us">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+            <div
+              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+                activeTab === "about-us" ? "font-semibold" : "font-medium"
+              } cursor-pointer`}
+            >
               O nás
             </div>
           </Link>
           {/* We offer  */}
           <Link href="/we-offer">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
+            <div
+              className={`we-offer text-[16px] relative hover:underline  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+                activeTab === "we-offer" ? "font-semibold" : "font-medium"
+              } cursor-pointer transition-all`}
+            >
               Ponúkame
+              <div
+                onClick={preventDefaultClick}
+                className="we-offer-dropdown w-[260px] z-[10] hidden flex-col items-start justify-start gap-[3px] bg-davyGrey px-3 py-3 text-white text-[14px] absolute top-[22px] sxl:top-[25px] mxl:top-[28px] xl:top-[33px] left-0 rounded-b-lg transition-all"
+              >
+                <a href="/we-offer#post-collection">
+                  <div>Pozberová linka</div>
+                </a>
+                <a href="/we-offer#seed-production">
+                  <div>Výroba osív</div>
+                </a>
+                <a href="/we-offer#products-sale">
+                  <div>Predaj priemyselných hnojív...</div>
+                </a>
+                <a href="/we-offer#cattle-sale">
+                  <div>Predaj hovädzieho dobytka</div>
+                </a>
+                <a href="/we-offer#sheep-milk-sale">
+                  <div>Predaj ovčieho mlieka</div>
+                </a>
+                <a href="/we-offer#agr-commodities">
+                  <div>Predaj a výkup agrokomodít</div>
+                </a>
+                <a href="/we-offer#ecological-agriculture">
+                  <div>Ekologické poľnohospodárstvo</div>
+                </a>
+                <a href="/we-offer#mechanization">
+                  <div>Poskytovanie mechanizačných...</div>
+                </a>
+              </div>
             </div>
           </Link>
           {/* Contacts  */}
           <Link href="/contacts">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+            <div
+              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+                activeTab === "contacts" ? "font-semibold" : "font-medium"
+              } cursor-pointer`}
+            >
               Kontakty
             </div>
           </Link>
           {/* Gallery  */}
           <Link href="/gallery">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+            <div
+              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+                activeTab === "gallery" ? "font-semibold" : "font-medium"
+              } cursor-pointer`}
+            >
               Galéria
             </div>
           </Link>
           {/* Corn Maze  */}
           <Link href="/corn-maze">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+            <div
+              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+                activeTab === "corn-maze" ? "font-semibold" : "font-medium"
+              } cursor-pointer`}
+            >
               Kukuričné bludisko
             </div>
           </Link>
           {/* News  */}
           <Link href="/news">
-            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-medium cursor-pointer">
+            <div
+              className={`text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+                activeTab === "news" ? "font-semibold" : "font-medium"
+              } cursor-pointer`}
+            >
               Aktuality
             </div>
           </Link>
@@ -68,7 +149,7 @@ const Navbar = () => {
         {/* Social Links  */}
         <div className="flex items-center justify-end gap-[4px]">
           {/* Facebook  */}
-          <Link href="">
+          <Link href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/fb.svg"
@@ -79,7 +160,7 @@ const Navbar = () => {
             </div>
           </Link>
           {/* Instagram  */}
-          <Link href="">
+          <Link href="https://www.instagram.com/klas_farm_/">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/ig.svg"
@@ -90,7 +171,7 @@ const Navbar = () => {
             </div>
           </Link>
           {/* Youtube  */}
-          <Link href="">
+          <Link href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/ytb.svg"

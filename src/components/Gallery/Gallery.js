@@ -52,8 +52,8 @@ const Gallery = () => {
               aria-describedby="modal-modal-description"
             >
               <Box sx={style}>
-                <div className="w-full flex flex-row items-start justify-between gap-3 sm:gap-5 px-[6px] sm:px-2 md:px-3">
-                  <div className="w-[310px] xs:w-[360px] vsm:w-[420px] sm:w-[460px] md:w-[550px] mxl:w-[600px] h-[250px] xs:h-[290px] vsm:h-[330px] sm:h-[370px] md:h-[400px] mxl:h-[450px] flex items-center justify-center relative">
+                <div className="w-full flex flex-row items-start justify-between gap-4 sm:gap-7 pl-11 sm:pl-14 md:pl-16 pr-[6px] sm:pr-2 md:pr-3">
+                  <div className="w-[280px] xs:w-[360px] vsm:w-[420px] sm:w-[460px] md:w-[550px] mxl:w-[600px] h-[240px] xs:h-[290px] vsm:h-[330px] sm:h-[370px] md:h-[400px] mxl:h-[450px] flex items-center justify-center relative">
                     <Image
                       src={modalImgUrl}
                       alt=""
@@ -62,7 +62,7 @@ const Gallery = () => {
                     />
                   </div>
                   <CloseIcon
-                    className="w-[24px] h-[24px] text-davyGrey cursor-pointer"
+                    className="w-[24px] h-[24px] text-davyGrey cursor-pointer mt-1"
                     onClick={handleClose}
                   />
                 </div>

@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 .slick-dots {
   bottom: 13px !important;
 }
@@ -90,3 +98,11 @@
 .MuiModal-backdrop {
   background-color: #0000000d !important;
 }
+
+.we-offer:hover .we-offer-dropdown {
+  display: flex;
+}
+
+/* .we-offer:hover .we-offer-dropdown {
+  display: flex;
+} */

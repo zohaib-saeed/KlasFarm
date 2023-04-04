@@ -61,7 +61,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
         {/* Social Links  */}
         <div className="flex items-center justify-end gap-[8px]">
           {/* Facebook  */}
-          <Link href="">
+          <Link href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/fb.svg"
@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
             </div>
           </Link>
           {/* Instagram  */}
-          <Link href="">
+          <Link href="https://www.instagram.com/klas_farm_/">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/ig.svg"
@@ -83,7 +83,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
             </div>
           </Link>
           {/* Youtube  */}
-          <Link href="">
+          <Link href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw">
             <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative">
               <Image
                 src="/icons/social/ytb.svg"
