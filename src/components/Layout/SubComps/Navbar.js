@@ -78,30 +78,30 @@ const Navbar = () => {
                 onClick={preventDefaultClick}
                 className="we-offer-dropdown w-[260px] z-[10] hidden flex-col items-start justify-start gap-[3px] bg-davyGrey px-3 py-3 text-white text-[14px] absolute top-[22px] sxl:top-[25px] mxl:top-[28px] xl:top-[33px] left-0 rounded-b-lg transition-all"
               >
-                <a href="/we-offer#post-collection">
+                <Link href="/we-offer#post-collection">
                   <div>Pozberová linka</div>
-                </a>
-                <a href="/we-offer#seed-production">
+                </Link>
+                <Link href="/we-offer#seed-production">
                   <div>Výroba osív</div>
-                </a>
-                <a href="/we-offer#products-sale">
+                </Link>
+                <Link href="/we-offer#products-sale">
                   <div>Predaj priemyselných hnojív...</div>
-                </a>
-                <a href="/we-offer#cattle-sale">
+                </Link>
+                <Link href="/we-offer#cattle-sale">
                   <div>Predaj hovädzieho dobytka</div>
-                </a>
-                <a href="/we-offer#sheep-milk-sale">
+                </Link>
+                <Link href="/we-offer#sheep-milk-sale">
                   <div>Predaj ovčieho mlieka</div>
-                </a>
-                <a href="/we-offer#agr-commodities">
+                </Link>
+                <Link href="/we-offer#agr-commodities">
                   <div>Predaj a výkup agrokomodít</div>
-                </a>
-                <a href="/we-offer#ecological-agriculture">
+                </Link>
+                <Link href="/we-offer#ecological-agriculture">
                   <div>Ekologické poľnohospodárstvo</div>
-                </a>
-                <a href="/we-offer#mechanization">
+                </Link>
+                <Link href="/we-offer#mechanization">
                   <div>Poskytovanie mechanizačných...</div>
-                </a>
+                </Link>
               </div>
             </div>
           </Link>
