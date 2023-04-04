@@ -46,9 +46,12 @@ const Navbar = () => {
               Kontakty
             </div>
           </Link>
-          <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
-            Galéria
-          </div>
+          {/* Gallery  */}
+          <Link href="/gallery">
+            <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">
+              Galéria
+            </div>
+          </Link>
           {/* Corn Maze  */}
           <Link href="/corn-maze">
             <div className="text-[16px]  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-medium cursor-pointer">

@@ -29,6 +29,8 @@ module.exports = {
       lightGrey: "#D9D9D9",
       bianca: "#FAFAFA",
       fireBush: "#F7942A",
+      silverSand: "#C1C2C3",
+      sotPeach: "#EFEFEF",
       blue: "#0075FF",
     },
     extend: {

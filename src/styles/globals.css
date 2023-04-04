@@ -86,3 +86,7 @@
   border-radius: 3px !important;
   overflow: hidden;
 }
+
+.MuiModal-backdrop {
+  background-color: #0000000d !important;
+}

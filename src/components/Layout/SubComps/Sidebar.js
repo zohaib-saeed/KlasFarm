@@ -39,7 +39,12 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
               Kontakty
             </div>
           </Link>
-          <div className="text-[18px]  font-medium cursor-pointer">Galéria</div>
+          {/* Gallery  */}
+          <Link href="/gallery">
+            <div className="text-[18px]  font-medium cursor-pointer">
+              Galéria
+            </div>
+          </Link>
           {/* Corn Maze  */}
           <Link href="/corn-maze">
             <div className="text-[18px]  font-medium cursor-pointer">
