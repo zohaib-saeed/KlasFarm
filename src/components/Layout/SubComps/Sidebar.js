@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
       direction="left"
       className="!w-full h-screen"
     >
-      <div className="w-full h-full flex flex-col items-center justify-between gap-12 sm:gap-16 pb-16 pt-6  px-2 xs:px-3 sm:px-4 md:px-5">
+      <div className="w-full h-full flex flex-col items-center justify-start gap-16 pb-16 pt-6  px-2 xs:px-3 sm:px-4 md:px-5">
         {/* Close Menu Button  */}
         <div className="w-full flex items-center justify-end">
           <CloseIcon
