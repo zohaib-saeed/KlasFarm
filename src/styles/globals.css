@@ -103,6 +103,17 @@ body {
   display: flex;
 }
 
-/* .we-offer:hover .we-offer-dropdown {
-  display: flex;
-} */
+.hover-link::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 0px;
+  height: 1.3px;
+  background-color: #f7942a;
+  transition: all 0.3s ease;
+}
+
+.hover-link:hover::before {
+  width: 100%;
+}

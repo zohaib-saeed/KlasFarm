@@ -42,10 +42,10 @@ const Navbar = () => {
   return (
     <React.Fragment>
       {/* Menu => Desktop (Above 1024px) */}
-      <div className="w-full max-w-[1440px] px-6 py-[6px] lg:py-[16px] hidden lg:flex items-center justify-between gap-4 sxl:gap-5 mxl:gap-6">
+      <div className="w-full max-w-[1440px] px-6 py-[6px] lg:py-[16px] hidden lg:flex items-center justify-between gap-4 sxl:gap-5 mxl:gap-6 ">
         {/* Logo  */}
         <Link href="/">
-          <div className="w-[170px] sxl:w-[190px] mxl:w-[210px] xl:w-[220px] h-[90px] mxl:h-[120px] xl:h-[125px] flex items-center justify-center relative transition-all">
+          <div className="w-[170px] sxl:w-[190px] mxl:w-[210px] xl:w-[220px] h-[90px] mxl:h-[120px] xl:h-[125px] flex items-center justify-center relative transition-all ">
             <Image
               src="/images/logo-main.svg"
               alt=""
@@ -59,9 +59,9 @@ const Navbar = () => {
           {/* About Us  */}
           <Link href="/about-us">
             <div
-              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "about-us" ? "font-semibold" : "font-medium"
-              } cursor-pointer`}
+              } cursor-pointer hover-link relative transition-all duration-300`}
             >
               O nás
             </div>
@@ -69,9 +69,9 @@ const Navbar = () => {
           {/* We offer  */}
           <Link href="/we-offer">
             <div
-              className={`we-offer hover:text-davyGrey transition-all text-[16px] relative hover:underline  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+              className={`we-offer hover:text-fireBush hover:font-normal   transition-all text-[16px] relative  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
                 activeTab === "we-offer" ? "font-semibold" : "font-medium"
-              } cursor-pointer transition-all`}
+              } cursor-pointer transition-all  duration-300 hover-link`}
             >
               Ponúkame
               <div
@@ -108,9 +108,9 @@ const Navbar = () => {
           {/* Contacts  */}
           <Link href="/contacts">
             <div
-              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px]  hover:text-fireBush hover:font-normal transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "contacts" ? "font-semibold" : "font-medium"
-              } cursor-pointer`}
+              } cursor-pointer relative hover-link transition-all duration-300`}
             >
               Kontakty
             </div>
@@ -118,9 +118,9 @@ const Navbar = () => {
           {/* Gallery  */}
           <Link href="/gallery">
             <div
-              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-fireBush hover:font-normal transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "gallery" ? "font-semibold" : "font-medium"
-              } cursor-pointer`}
+              } cursor-pointer   relative hover-link transition-all duration-300`}
             >
               Galéria
             </div>
@@ -128,9 +128,9 @@ const Navbar = () => {
           {/* Corn Maze  */}
           <Link href="/corn-maze">
             <div
-              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
+              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
                 activeTab === "corn-maze" ? "font-semibold" : "font-medium"
-              } cursor-pointer`}
+              } cursor-pointer relative hover-link transition-all duration-300`}
             >
               Kukuričné bludisko
             </div>
@@ -138,9 +138,9 @@ const Navbar = () => {
           {/* News  */}
           <Link href="/news">
             <div
-              className={`text-[16px] hover:text-davyGrey transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
+              className={`text-[16px] hover:text-fireBush hover:font-normal sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
                 activeTab === "news" ? "font-semibold" : "font-medium"
-              } cursor-pointer`}
+              } cursor-pointer relative hover-link transition-all duration-300`}
             >
               Aktuality
             </div>
@@ -195,14 +195,16 @@ const Navbar = () => {
       {/* Menu => Small Screens (Below 1024px) */}
       <div className="w-full flex lg:hidden items-center justify-between px-2 xs:px-3 sm:px-4 md:px-5 py-[8px]">
         {/* Logo  */}
-        <div className="w-[170px] h-[90px]   flex items-center justify-center relative  trasition-all">
-          <Image
-            src="/images/logo-main.svg"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </div>
+        <Link href="/">
+          <div className="w-[170px] h-[90px]   flex items-center justify-center relative  trasition-all">
+            <Image
+              src="/images/logo-main.svg"
+              alt=""
+              fill
+              className="object-contain"
+            />
+          </div>
+        </Link>
         <div className="flex items-center justify-end gap-2 md:gap-3">
           {/* Find  */}
           <SearchIcon className="w-[24px] h-[26px] cursor-pointer" />

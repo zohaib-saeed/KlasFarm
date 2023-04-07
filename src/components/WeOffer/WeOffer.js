@@ -7,9 +7,9 @@ import SectionImage from "./SubComps/SectionImage/SectionImage";
 
 const WeOffer = () => {
   return (
-    <div className="w-full max-w-[1440px] pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
+    <div className="w-full  pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 ">
       <div className="relative w-full">
-        <div className="w-full h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+        <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
           <Image
             src="/images/we-offer/wallpaper.png"
             alt=""
@@ -21,7 +21,7 @@ const WeOffer = () => {
           Ponúkame
         </p>
       </div>
-      <div className="w-full flex flex-col items-end justify-start">
+      <div className="w-full max-w-[1440px] flex flex-col items-end justify-start px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
         <div className="w-full max-w-[1280px] flex flex-col items-center justify-start gap-10">
           {/* Item 1  */}
           <div

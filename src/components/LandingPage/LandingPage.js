@@ -8,10 +8,7 @@ const LandingPage = () => {
   const sliderRef = useRef(null);
 
   const PrevIcon = ({ onClick }) => (
-    <div
-      onClick={onClick}
-      className="absolute left-0 xs:left-4 mxl:left-6  top-[40%] z-[99]"
-    >
+    <div onClick={onClick} className="absolute left-0   top-[40%] z-[99]">
       <div className="w-[60px] h-[60px] cursor-pointer relative flex items-center justify-center">
         <Image
           src="/icons/prev-arrow.svg"
@@ -23,10 +20,7 @@ const LandingPage = () => {
     </div>
   );
   const NextIcon = ({ onClick }) => (
-    <div
-      onClick={onClick}
-      className="absolute right-4 xs:right-7 mxl:right-9  top-[41%] z-[99]"
-    >
+    <div onClick={onClick} className="absolute right-4  top-[41%] z-[99]">
       <div className="w-[30px] h-[60px] cursor-pointer relative flex items-center justify-center">
         <Image
           src="/icons/next-arrow.svg"
@@ -50,14 +44,14 @@ const LandingPage = () => {
   return (
     <div
       ref={sliderRef}
-      className="w-full max-w-[1440px] flex flex-col items-center justify-start"
+      className="w-full  flex flex-col items-center justify-start"
     >
       {/* Slider  */}
       <div className="w-full">
         <Slider {...settings}>
           {/* Slide 1 */}
           <div className="relative">
-            <div className="w-full h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+            <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
               <Image
                 src="/images/landing-page/carousel-1.png"
                 alt=""
@@ -71,7 +65,7 @@ const LandingPage = () => {
           </div>
           {/* Slide 2  */}
           <div className="relative">
-            <div className="w-full h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+            <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
               <Image
                 src="/images/landing-page/carousel-2.png"
                 alt=""

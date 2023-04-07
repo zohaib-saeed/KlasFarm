@@ -27,8 +27,8 @@ const Gallery = () => {
   const handleClose = () => setOpenModal(false);
 
   return (
-    <div className="w-full max-w-[1440px] pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
-      <div className="w-full h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+    <div className="w-full pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 ">
+      <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
         <Image
           src="/images/gallery/wallpaper.png"
           alt=""
@@ -36,7 +36,7 @@ const Gallery = () => {
           className="object-cover"
         />
       </div>
-      <div className="w-full grid grid-cols-3 vsm:grid-cols-4 md:grid-cols-5 mdl:grid-cols-6 gap-2 xs:gap-[10px] mdl:gap-3 sxl:gap-4 xl:gap-5">
+      <div className="w-full max-w-[1440px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6 grid grid-cols-3 vsm:grid-cols-4 md:grid-cols-5 mdl:grid-cols-6 gap-2 xs:gap-[10px] mdl:gap-3 sxl:gap-4 xl:gap-5">
         {galleryData.map((item, index) => (
           <div key={index} className="w-full flex items-center justify-center">
             <div
