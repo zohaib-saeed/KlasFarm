@@ -82,7 +82,7 @@ const LandingPage = () => {
       {/* Main Content  */}
       <div className="w-full flex flex-col items-center justify-start py-10 mdl:pt-16 mdl:pb-[360px] lg:pb-[367px] sxl:pb-[400px] mxl:pb-[410px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
         <div className="w-full grid grid-cols-1 mdl:grid-cols-2 gap-4 sm:gap-6 mdl:gap-0   relative">
-          <div className="flex items-center justify-start ">
+          <div className="order-2 mdl:order-first flex items-center justify-center mdl:justify-start ">
             <div className="w-[350px] xs:w-[460px] vsm:w-[470px] sm:w-[520px] h-[300px] xs:h-[400px] vsm:h-[410px] sm:h-[430px] flex mdl:hidden  items-center justify-center relative  transition-all">
               <Image
                 src="/images/landing-page/landing-page-main.png"
