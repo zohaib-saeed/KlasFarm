@@ -79,7 +79,7 @@ const AboutUs = () => {
       {/* Main Content  */}
       <div className="w-full max-w-[1440px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] mxl:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-10 mxl:gap-12 pt-9 pb-12">
         {/* Col 1 */}
-        <div className="order-2 lg:order-1 w-full flex items-center justify-start">
+        <div className="order-2 lg:order-first w-full flex items-center justify-start">
           <div className="w-full  xs:max-w-[85%] sm:max-w-[75%] mdl:max-w-[60%] lg:max-w-none h-[370px] vsm:h-[500px] sm:h-[550px] mdl:h-[600px] flex items-center justify-center relative">
             <Image
               src="/images/about-us/about-us-main.png"
