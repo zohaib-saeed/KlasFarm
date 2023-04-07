@@ -5,7 +5,7 @@ import ActionedEmail from "./ActionedEmail";
 const Contacts = () => {
   return (
     <div className="w-full  pb-10 vsm:pb-12 md:pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 vsm:gap-12 md:gap-16 lg:gap-24 ">
-      <div className="w-full h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+      <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
         <Image
           src="/images/contacts/wallpaper.png"
           alt=""
