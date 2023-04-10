@@ -59,9 +59,7 @@ const Navbar = () => {
           {/* About Us  */}
           <Link href="/about-us">
             <div
-              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
-                activeTab === "about-us" ? "font-semibold" : "font-medium"
-              } cursor-pointer hover-link relative transition-all duration-300`}
+              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-normal cursor-pointer hover-link relative transition-all duration-300`}
             >
               O nás
             </div>
@@ -69,9 +67,7 @@ const Navbar = () => {
           {/* We offer  */}
           <Link href="/we-offer">
             <div
-              className={`we-offer hover:text-fireBush hover:font-normal   transition-all text-[16px] relative  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
-                activeTab === "we-offer" ? "font-semibold" : "font-medium"
-              } cursor-pointer transition-all  duration-300 hover-link`}
+              className={`we-offer hover:text-fireBush hover:font-normal  text-[16px] relative  sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-normal cursor-pointer transition-all  duration-300 hover-link`}
             >
               Ponúkame
               <div
@@ -108,9 +104,7 @@ const Navbar = () => {
           {/* Contacts  */}
           <Link href="/contacts">
             <div
-              className={`text-[16px]  hover:text-fireBush hover:font-normal transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
-                activeTab === "contacts" ? "font-semibold" : "font-medium"
-              } cursor-pointer relative hover-link transition-all duration-300`}
+              className={`text-[16px]  hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-normal cursor-pointer relative hover-link transition-all duration-300`}
             >
               Kontakty
             </div>
@@ -118,9 +112,7 @@ const Navbar = () => {
           {/* Gallery  */}
           <Link href="/gallery">
             <div
-              className={`text-[16px] hover:text-fireBush hover:font-normal transition-all sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
-                activeTab === "gallery" ? "font-semibold" : "font-medium"
-              } cursor-pointer   relative hover-link transition-all duration-300`}
+              className={`text-[16px] hover:text-fireBush hover:font-normal sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-normal cursor-pointer   relative hover-link transition-all duration-300`}
             >
               Galéria
             </div>
@@ -128,9 +120,7 @@ const Navbar = () => {
           {/* Corn Maze  */}
           <Link href="/corn-maze">
             <div
-              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  ${
-                activeTab === "corn-maze" ? "font-semibold" : "font-medium"
-              } cursor-pointer relative hover-link transition-all duration-300`}
+              className={`text-[16px] hover:text-fireBush hover:font-normal  sxl:text-[18px] mxl:text-[20px] xl:text-[25px]  font-normal cursor-pointer relative hover-link transition-all duration-300`}
             >
               Kukuričné bludisko
             </div>
@@ -138,9 +128,7 @@ const Navbar = () => {
           {/* News  */}
           <Link href="/news">
             <div
-              className={`text-[16px] hover:text-fireBush hover:font-normal sxl:text-[18px] mxl:text-[20px] xl:text-[25px] ${
-                activeTab === "news" ? "font-semibold" : "font-medium"
-              } cursor-pointer relative hover-link transition-all duration-300`}
+              className={`text-[16px] hover:text-fireBush hover:font-normal sxl:text-[18px] mxl:text-[20px] xl:text-[25px] font-normal cursor-pointer relative hover-link transition-all duration-300`}
             >
               Aktuality
             </div>

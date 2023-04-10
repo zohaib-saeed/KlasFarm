@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import ActionedEmail from "./ActionedEmail";
 
 const Contacts = () => {
