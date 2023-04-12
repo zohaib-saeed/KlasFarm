@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
           {/* Contact for agricultral purchases  */}
           <div className="w-full flex flex-col items-center lg:items-start justify-center gap-1">
-            <div className=" text-white text-[15px] xl:text-base font-semibold w-full text-center">
+            <div className=" text-white text-[15px] xl:text-base font-semibold w-full text-center lg:text-left">
               Predaj, nákup agrokomodít, služby pozberovej linky
             </div>
             <div className="text-white text-[16px] xl:text-[18px]">
