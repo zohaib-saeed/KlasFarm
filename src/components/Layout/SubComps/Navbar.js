@@ -17,17 +17,18 @@ const Navbar = () => {
   };
 
   const targetRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const showSearchInput = isHovered || isFocused;
+  const [showSearchInput, setShowSearchInput] = useState(false);
 
   useEffect(() => {
     targetRef.current.value = "";
   }, [showSearchInput]);
 
   const handleShowSearchInput = () => {
-    setIsFocused(false);
-    setIsHovered(false);
+    setShowSearchInput(false);
+  };
+
+  const handleHideSearchInput = () => {
+    setShowSearchInput(true);
   };
 
   return (
@@ -163,29 +164,18 @@ const Navbar = () => {
           </Link>
           {/* Search Input  */}
           <div
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={handleHideSearchInput}
             onMouseLeave={handleShowSearchInput}
-            onFocus={() => setIsFocused(true)}
-            onBlur={handleShowSearchInput}
-            hover={showSearchInput}
-            className={`relative w-[40px] h-[40px] border-2 border-solid border-davyGrey flex flex-col items-center justify-center ${
-              showSearchInput ? "bg-white px-[2px]" : "bg-davyGrey"
-            } transition-all duration-500 rounded-full hover:w-[250px]`}
+            className={`relative w-[40px] h-[40px] border-2 border-solid border-davyGrey flex flex-col items-center justify-center search-btn-container hover:px-2 hover:bg-white bg-davyGrey transition-all duration-500 rounded-full hover:w-[250px] z-50`}
           >
             <input
               type="text"
               placeholder="Search here..."
               ref={targetRef}
-              className={`absolute w-full h-[36px] rounded-[20px] px-2 py-[10px] text-davyGrey outline-none border-none text-base font-medium ${
-                showSearchInput ? "block" : "hidden"
-              }`}
+              className={`absolute w-full h-[36px] rounded-[20px] px-2 py-[10px] text-davyGrey outline-none border-none text-base font-medium search-input hidden`}
             />
             <SearchIcon
-              className={`w-[28px] h-[28px] z-50 cursor-pointer ${
-                showSearchInput
-                  ? "self-end text-davyGrey"
-                  : "self-center text-white"
-              }`}
+              className={`w-[28px] h-[28px] z-20 cursor-pointer search-icon self-center text-white`}
             />
           </div>
         </div>

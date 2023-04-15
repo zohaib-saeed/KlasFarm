@@ -132,3 +132,11 @@ body {
 }
 
 /* Search bar  */
+.search-btn-container:hover .search-input {
+  display: block;
+}
+
+.search-btn-container:hover .search-icon {
+  align-self: end;
+  color: #58595b;
+}
