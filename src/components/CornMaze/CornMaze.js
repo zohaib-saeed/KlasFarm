@@ -14,7 +14,7 @@ const CornMaze = () => {
           />
         </div>
         <p className="text-[40px] lg:text-[45px] sxl:text-[50px] mxl:text-[60px] text-white font-mistral absolute top-[35%] left-[6%]">
-          Kukuričné bludisko 2022
+          Kukuričné bludisko
         </p>
       </div>
       <div className="w-full flex flex-col items-center justify-start max-w-[1440px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6 gap-10 lg:gap-16">

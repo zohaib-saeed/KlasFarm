@@ -117,3 +117,18 @@ body {
 .hover-link:hover::before {
   width: 100%;
 }
+
+/* Fade in animation  */
+.fade-in {
+  opacity: 0;
+  animation: fade-in 3s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

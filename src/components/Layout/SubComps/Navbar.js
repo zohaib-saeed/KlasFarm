@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu as MenuIcon } from "react-icons/fi";
@@ -7,8 +6,8 @@ import { BiSearch as SearchIcon } from "react-icons/bi";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
-  const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+
   const toggleDrawer = () => {
     setOpenMenu((prevState) => !prevState);
   };
@@ -17,27 +16,7 @@ const Navbar = () => {
     event.stopPropagation();
   };
 
-  const [activeTab, setActiveTab] = useState("");
-
-  const handleActiveLinks = () => {
-    if (router.pathname === "/about-us") {
-      setActiveTab("about-us");
-    } else if (router.pathname.includes("/we-offer")) {
-      setActiveTab("we-offer");
-    } else if (router.pathname === "/contacts") {
-      setActiveTab("contacts");
-    } else if (router.pathname === "/gallery") {
-      setActiveTab("gallery");
-    } else if (router.pathname === "/news") {
-      setActiveTab("news");
-    } else if (router.pathname === "/corn-maze") {
-      setActiveTab("corn-maze");
-    }
-  };
-
-  useEffect(() => {
-    handleActiveLinks();
-  }, [router]);
+  const handleSearch = () => {};
 
   return (
     <React.Fragment>
@@ -126,10 +105,10 @@ const Navbar = () => {
             Aktuality
           </Link>
         </div>
-        {/* Social Links  */}
+        {/* Social Links + Search button */}
         <div className="flex items-center justify-end gap-[4px]">
           {/* Facebook  */}
-          <Link
+          {/* <Link
             href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr"
             className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
           >
@@ -139,9 +118,9 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link>
+          </Link> */}
           {/* Instagram  */}
-          <Link
+          {/* <Link
             href="https://www.instagram.com/klas_farm_/"
             className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
           >
@@ -151,9 +130,9 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link>
+          </Link> */}
           {/* Youtube  */}
-          <Link
+          {/* <Link
             href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw"
             className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
           >
@@ -163,14 +142,26 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link>
-          {/* Find  */}
-          <div className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] cursor-pointer flex items-center justify-center relative">
-            <Image
-              src="/icons/social/find.svg"
-              alt=""
-              fill
-              className="object-contain"
+          </Link> */}
+          {/* Search */}
+          <div
+            className={`relative flex items-center justify-end py-[3px] px-1 border-2 border-solid border-davyGrey rounded-full bg-white `}
+          >
+            <div
+              onClick={handleSearch}
+              className="w-[35px] h-[35px] cursor-pointer flex items-center justify-center relative rotate-90"
+            >
+              <Image
+                src="/icons/social/find.svg"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Search here"
+              className={`w-[60px]  bg-white text-[16px] text-black focus:border-none outline-none `}
             />
           </div>
         </div>

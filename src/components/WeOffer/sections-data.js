@@ -11,7 +11,7 @@ export const sectionsData = [
     description:
       "Podstatnú časť našej činnosti tvory výroba farmárskeho a certifikovaného osiva, pšenice (ozimná / jarná).",
     email: "pastorok@klasfarm.sk",
-    imgUrl: "/images/we-offer/offers/seed-production.png",
+    imgUrl: "/images/we-offer/offers/seeds-production.png",
   },
   {
     headline:
@@ -19,12 +19,12 @@ export const sectionsData = [
     description:
       "Na základe vášho dopytu vieme zabezpečiť priemyselné hnojivá, osivá či prípravky na ochranu rastlín. Možnosť zabezpečenia dopravy do miesta dodania.",
     email: "pastorok@klasfarm.sk",
-    imgUrl: "/images/we-offer/offers/seed-production.png",
+    imgUrl: "/images/we-offer/offers/products-sale.png",
   },
   {
     headline: "Predaj hovädzieho dobytka",
     description:
-      "Na základe vášho dopytu vieme zabezpečiť priemyselné hnojivá, osivá či prípravky na ochranu rastlín. Možnosť zabezpečenia dopravy do miesta dodania.",
+      "Špecializujeme sa na výkrm býkov a jalovíc v rôznych váhových kategóriách",
     email: "slovak@klasfarm.sk",
     imgUrl: "/images/we-offer/offers/cattle-sale.png",
   },
