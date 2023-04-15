@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu as MenuIcon } from "react-icons/fi";
@@ -16,7 +16,19 @@ const Navbar = () => {
     event.stopPropagation();
   };
 
-  const handleSearch = () => {};
+  const targetRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const showSearchInput = isHovered || isFocused;
+
+  useEffect(() => {
+    targetRef.current.value = "";
+  }, [showSearchInput]);
+
+  const handleShowSearchInput = () => {
+    setIsFocused(false);
+    setIsHovered(false);
+  };
 
   return (
     <React.Fragment>
@@ -108,9 +120,11 @@ const Navbar = () => {
         {/* Social Links + Search button */}
         <div className="flex items-center justify-end gap-[4px]">
           {/* Facebook  */}
-          {/* <Link
+          <Link
             href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr"
-            className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
+              showSearchInput ? "hidden" : "flex"
+            } items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/fb.svg"
@@ -118,11 +132,13 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link> */}
+          </Link>
           {/* Instagram  */}
-          {/* <Link
+          <Link
             href="https://www.instagram.com/klas_farm_/"
-            className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
+              showSearchInput ? "hidden" : "flex"
+            } items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/ig.svg"
@@ -130,11 +146,13 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link> */}
+          </Link>
           {/* Youtube  */}
-          {/* <Link
+          <Link
             href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw"
-            className="w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative"
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
+              showSearchInput ? "hidden" : "flex"
+            } items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/ytb.svg"
@@ -142,26 +160,32 @@ const Navbar = () => {
               fill
               className="object-contain"
             />
-          </Link> */}
-          {/* Search */}
+          </Link>
+          {/* Search Input  */}
           <div
-            className={`relative flex items-center justify-end py-[3px] px-1 border-2 border-solid border-davyGrey rounded-full bg-white `}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={handleShowSearchInput}
+            onFocus={() => setIsFocused(true)}
+            onBlur={handleShowSearchInput}
+            hover={showSearchInput}
+            className={`relative w-[40px] h-[40px] border-2 border-solid border-davyGrey flex flex-col items-center justify-center ${
+              showSearchInput ? "bg-white px-[2px]" : "bg-davyGrey"
+            } transition-all duration-500 rounded-full hover:w-[250px]`}
           >
-            <div
-              onClick={handleSearch}
-              className="w-[35px] h-[35px] cursor-pointer flex items-center justify-center relative rotate-90"
-            >
-              <Image
-                src="/icons/social/find.svg"
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
             <input
               type="text"
-              placeholder="Search here"
-              className={`w-[60px]  bg-white text-[16px] text-black focus:border-none outline-none `}
+              placeholder="Search here..."
+              ref={targetRef}
+              className={`absolute w-full h-[36px] rounded-[20px] px-2 py-[10px] text-davyGrey outline-none border-none text-base font-medium ${
+                showSearchInput ? "block" : "hidden"
+              }`}
+            />
+            <SearchIcon
+              className={`w-[28px] h-[28px] z-50 cursor-pointer ${
+                showSearchInput
+                  ? "self-end text-davyGrey"
+                  : "self-center text-white"
+              }`}
             />
           </div>
         </div>

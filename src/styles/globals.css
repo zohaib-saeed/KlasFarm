@@ -40,8 +40,6 @@ body {
 }
 
 /* Toottip styling  */
-.MuiTooltip-popper {
-}
 
 .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-tooltip {
   margin-bottom: -4px !important;
@@ -132,3 +130,5 @@ body {
     opacity: 1;
   }
 }
+
+/* Search bar  */
