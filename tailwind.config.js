@@ -32,6 +32,7 @@ module.exports = {
       silverSand: "#C1C2C3",
       sotPeach: "#EFEFEF",
       blue: "#0075FF",
+      sunShade: "#F7942A",
     },
     extend: {
       fontFamily: {

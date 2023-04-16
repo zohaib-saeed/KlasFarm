@@ -3,10 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiMenu as MenuIcon } from "react-icons/fi";
 import { BiSearch as SearchIcon } from "react-icons/bi";
+
 import Sidebar from "./Sidebar";
+import SearchPopup from "@/components/Search/SearchPopup";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
 
   const toggleDrawer = () => {
     setOpenMenu((prevState) => !prevState);
@@ -16,19 +19,8 @@ const Navbar = () => {
     event.stopPropagation();
   };
 
-  const targetRef = useRef(null);
-  const [showSearchInput, setShowSearchInput] = useState(false);
-
-  useEffect(() => {
-    targetRef.current.value = "";
-  }, [showSearchInput]);
-
-  const handleShowSearchInput = () => {
-    setShowSearchInput(false);
-  };
-
-  const handleHideSearchInput = () => {
-    setShowSearchInput(true);
+  const toggleSearch = () => {
+    setOpenSearch((prevState) => !prevState);
   };
 
   return (
@@ -123,9 +115,7 @@ const Navbar = () => {
           {/* Facebook  */}
           <Link
             href="https://web.facebook.com/klasfarm1?_rdc=1&_rdr"
-            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
-              showSearchInput ? "hidden" : "flex"
-            } items-center justify-center relative transition-all duration-500`}
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/fb.svg"
@@ -137,9 +127,7 @@ const Navbar = () => {
           {/* Instagram  */}
           <Link
             href="https://www.instagram.com/klas_farm_/"
-            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
-              showSearchInput ? "hidden" : "flex"
-            } items-center justify-center relative transition-all duration-500`}
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/ig.svg"
@@ -151,9 +139,7 @@ const Navbar = () => {
           {/* Youtube  */}
           <Link
             href="https://www.youtube.com/channel/UCQ6DTc6XwIql9JTz5XlYqGw"
-            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] ${
-              showSearchInput ? "hidden" : "flex"
-            } items-center justify-center relative transition-all duration-500`}
+            className={`w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] flex items-center justify-center relative transition-all duration-500`}
           >
             <Image
               src="/icons/social/ytb.svg"
@@ -164,18 +150,14 @@ const Navbar = () => {
           </Link>
           {/* Search Input  */}
           <div
-            onMouseEnter={handleHideSearchInput}
-            onMouseLeave={handleShowSearchInput}
-            className={`relative w-[40px] h-[40px] border-2 border-solid border-davyGrey flex flex-col items-center justify-center search-btn-container hover:px-2 hover:bg-white bg-davyGrey transition-all duration-500 rounded-full hover:w-[250px] z-50`}
+            onClick={toggleSearch}
+            className="flex items-center justify-center cursor-pointer relative w-[35px] xl:w-[40px] h-[35px] xl:h-[40px] overflow-hidden rounded-full"
           >
-            <input
-              type="text"
-              placeholder="Search here..."
-              ref={targetRef}
-              className={`absolute w-full h-[36px] rounded-[20px] px-2 py-[10px] text-davyGrey outline-none border-none text-base font-medium search-input hidden`}
-            />
-            <SearchIcon
-              className={`w-[28px] h-[28px] z-20 cursor-pointer search-icon self-center text-white`}
+            <Image
+              src="/icons/search.svg"
+              alt=""
+              fill
+              className="object-contain"
             />
           </div>
         </div>
@@ -196,7 +178,10 @@ const Navbar = () => {
         </Link>
         <div className="flex items-center justify-end gap-2 md:gap-3">
           {/* Find  */}
-          <SearchIcon className="w-[24px] h-[26px] cursor-pointer" />
+          <SearchIcon
+            onClick={toggleSearch}
+            className="w-[24px] h-[26px] cursor-pointer"
+          />
           {/* Menu Icon  */}
           <MenuIcon
             onClick={toggleDrawer}
@@ -210,6 +195,8 @@ const Navbar = () => {
         setIsOpen={setOpenMenu}
         toggleDrawer={toggleDrawer}
       />
+      {/* Serch Popup  */}
+      <SearchPopup open={openSearch} toggleModal={toggleSearch} />
     </React.Fragment>
   );
 };
