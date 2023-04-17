@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const LandingPage = () => {
   const sliderRef = useRef(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const PrevIcon = ({ onClick }) => (
     <div onClick={onClick} className="absolute left-0   top-[45%] z-[99]">
@@ -43,18 +44,18 @@ const LandingPage = () => {
     pauseOnDotsHover: false,
     pauseOnFocus: false,
     autoplaySpeed: 3000,
+    beforeChange: (current, next) => setCurrentSlideIndex(next),
     nextArrow: <NextIcon onClick={() => sliderRef.current?.slickNext()} />,
     prevArrow: <PrevIcon onClick={() => sliderRef.current?.slickPrev()} />,
   };
 
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const numSlides = 2;
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlideIndex((index) => (index + 1) % numSlides);
-    }, 3000); // change this to adjust slide duration
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlideIndex((index) => (index + 1) % numSlides);
+  //   }, 3000); // change this to adjust slide duration
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div
