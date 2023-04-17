@@ -76,8 +76,9 @@ const SearchPopup = ({ open, toggleModal }) => {
           <div className="w-full flex items-center justify-between gap-[6px] sm:gap-3 py-[6px] ">
             <input
               type="text"
+              placeholder="Napíš kľúčové slová "
               onChange={(event) => setSearchString(event.target.value)}
-              className="flex-1 border-none outline-none bg-opacity-0 text-base font-medium "
+              className="flex-1 border-none outline-none bg-opacity-0 text-base font-medium placeholder:text-black placeholder:font-medium"
               onKeyDown={handleKeyDown}
             />
             <div

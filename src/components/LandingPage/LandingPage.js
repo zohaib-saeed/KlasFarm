@@ -49,14 +49,6 @@ const LandingPage = () => {
     prevArrow: <PrevIcon onClick={() => sliderRef.current?.slickPrev()} />,
   };
 
-  const numSlides = 2;
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlideIndex((index) => (index + 1) % numSlides);
-  //   }, 3000); // change this to adjust slide duration
-  //   return () => clearInterval(interval);
-  // }, []);
-
   return (
     <div
       ref={sliderRef}
