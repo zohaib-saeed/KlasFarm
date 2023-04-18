@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,6 +8,7 @@ const LandingPage = () => {
   const sliderRef = useRef(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
+  // Slider Custom icons
   const PrevIcon = ({ onClick }) => (
     <div onClick={onClick} className="absolute left-0   top-[45%] z-[99]">
       <div className="w-[60px] h-[60px] cursor-pointer relative flex items-center justify-center">
@@ -33,6 +34,7 @@ const LandingPage = () => {
     </div>
   );
 
+  // Slider settings
   const settings = {
     dots: true,
     infinite: true,

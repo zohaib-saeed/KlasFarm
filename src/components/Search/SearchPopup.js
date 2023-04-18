@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { BiSearch as SearchIcon } from "react-icons/bi";
@@ -14,7 +13,7 @@ const SearchPopup = ({ open, toggleModal }) => {
   // Mui Modal Box styles
   const style = {
     position: "absolute",
-    top: "50%",
+    top: "40%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     bgcolor: "",
@@ -72,8 +71,8 @@ const SearchPopup = ({ open, toggleModal }) => {
       className="!overflow-hidden"
     >
       <Box sx={style}>
-        <div className="px-2 sm:px-3 bg-white w-[320px] sm:w-[400px] flex flex-col items-center justify-start !outline-none rounded-xl overflow-hidden ">
-          <div className="w-full flex items-center justify-between gap-[6px] sm:gap-3 py-[6px] ">
+        <div className="px-2 sm:px-3 bg-white w-[320px] xs:w-[400px] sm:w-[460px] mdl:w-[600px] flex flex-col items-center justify-start !outline-none rounded-xl mdl:rounded-2xl overflow-hidden ">
+          <div className="w-full flex items-center justify-between gap-[6px] sm:gap-3 py-[6px] mdl:py-2 ">
             <input
               type="text"
               placeholder="Napíš kľúčové slová "
@@ -83,9 +82,9 @@ const SearchPopup = ({ open, toggleModal }) => {
             />
             <div
               onClick={handleShowSearchResults}
-              className="flex items-center justify-center w-[32px] sm:w-[38px] h-[32px] sm:h-[35px] bg-granite cursor-pointer rounded-full"
+              className="flex items-center justify-center w-[32px] sm:w-[38px] mdl:w-[42px] h-[32px] sm:h-[35px] mdl:h-[42px] bg-granite cursor-pointer rounded-full"
             >
-              <SearchIcon className="w-[20px] sm:w-[23px] h-[20px] sm:h-[23px] text-white" />
+              <SearchIcon className="w-[20px] sm:w-[23px] mdl:w-[25px] h-[20px] sm:h-[23px] mdl:h-[25px] text-white" />
             </div>
           </div>
           {searchString.length > 0 && showSearchResults && (
