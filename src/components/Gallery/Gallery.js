@@ -54,7 +54,8 @@ const Gallery = () => {
               open={openModal}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
+              aria-describedby="modal-modal-description "
+              className="gallery-modal"
             >
               <Box sx={style}>
                 <div className="w-full flex flex-row items-start justify-between gap-4 sm:gap-7 pl-11 sm:pl-14 md:pl-16 pr-[6px] sm:pr-2 md:pr-3">

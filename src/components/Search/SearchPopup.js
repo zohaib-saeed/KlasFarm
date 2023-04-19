@@ -68,7 +68,7 @@ const SearchPopup = ({ open, toggleModal }) => {
       onClose={toggleModal}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
-      className="!overflow-hidden"
+      className="!overflow-hidden search-box"
     >
       <Box sx={style}>
         <div className="px-2 sm:px-3 bg-white w-[320px] xs:w-[400px] sm:w-[460px] mdl:w-[600px] flex flex-col items-center justify-start !outline-none rounded-xl mdl:rounded-2xl overflow-hidden ">

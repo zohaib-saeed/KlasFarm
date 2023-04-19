@@ -1,10 +1,9 @@
-/* MUI modal component styling  */
-.MuiModal-backdrop {
+/* Search modal modal component styling  */
+.search-box .MuiModal-backdrop {
   background-color: rgba(0, 0, 0, 0.459) !important;
 }
 
 /*Material UI Toottip styling  */
-
 .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-tooltip {
   margin-bottom: -4px !important;
 }
@@ -57,6 +56,7 @@
   overflow: hidden;
 }
 
-.MuiModal-backdrop {
+/* Gallery modal  */
+.gallery-modal .MuiModal-backdrop {
   background-color: #0000000d !important;
 }
