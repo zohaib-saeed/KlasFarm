@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { galleryData } from "./gallery-data";
+import { galleryData } from "../../data/gallery";
 
 const style = {
   position: "absolute",
@@ -28,14 +26,21 @@ const Gallery = () => {
 
   return (
     <div className="w-full pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 ">
-      <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
-        <Image
-          src="/images/gallery/wallpaper.png"
-          alt=""
-          fill
-          className="object-cover"
-        />
+      {/* Wallpaper  */}
+      <div className="relative w-full">
+        <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+          <Image
+            src="/images/gallery/wallpaper.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="text-[40px] lg:text-[45px] sxl:text-[50px] mxl:text-[60px] text-white font-mistral absolute top-[35%] left-[6%]">
+          Galérgia
+        </p>
       </div>
+      {/* Main Content  */}
       <div className="w-full max-w-[1440px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6 grid grid-cols-3 vsm:grid-cols-4 md:grid-cols-5 mdl:grid-cols-6 gap-2 xs:gap-[10px] mdl:gap-3 sxl:gap-4 xl:gap-5">
         {galleryData.map((item, index) => (
           <div key={index} className="w-full flex items-center justify-center">

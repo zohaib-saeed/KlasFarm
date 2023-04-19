@@ -1,4 +1,4 @@
-export const sectionsData = [
+export const weOffer = [
   {
     headline: "Pozberová linka",
     description:

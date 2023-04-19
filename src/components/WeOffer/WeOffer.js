@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import ConnectBtn from "./SubComps/ConnectTooltip/ConnectBtn";
 import ContentCard from "./SubComps/ContentCard/ContentCard";
-import { sectionsData } from "./sections-data";
+import { weOffer } from "../../data/we-offer";
 import SectionImage from "./SubComps/SectionImage/SectionImage";
 
 const WeOffer = () => {
   return (
     <div className="w-full  pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 lg:gap-16 ">
+      {/* Wallpaper */}
       <div className="relative w-full">
         <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
           <Image
@@ -21,6 +22,7 @@ const WeOffer = () => {
           Ponúkame
         </p>
       </div>
+      {/* Content  */}
       <div className="w-full max-w-[1440px] flex flex-col items-end justify-start px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
         <div className="w-full max-w-[1280px] flex flex-col items-center justify-start gap-10">
           {/* Item 1  */}
@@ -31,14 +33,14 @@ const WeOffer = () => {
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
-                headline={sectionsData[0].headline}
-                text={sectionsData[0].description}
-                email={sectionsData[0].email}
+                headline={weOffer[0].headline}
+                text={weOffer[0].description}
+                email={weOffer[0].email}
               />
             </div>
             {/* Col 2  */}
             <div className="order-1 sm:order-2 w-full flex items-center justify-end mdl:pt-16">
-              <SectionImage url={sectionsData[0].imgUrl} />
+              <SectionImage url={weOffer[0].imgUrl} />
             </div>
           </div>
           {/* Item 2  */}
@@ -48,14 +50,14 @@ const WeOffer = () => {
           >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
-              <SectionImage url={sectionsData[1].imgUrl} />
+              <SectionImage url={weOffer[1].imgUrl} />
             </div>
             {/* Col 2  */}
             <div className="order-2 w-full flex items-center justify-end">
               <ContentCard
-                headline={sectionsData[1].headline}
-                text={sectionsData[1].description}
-                email={sectionsData[1].email}
+                headline={weOffer[1].headline}
+                text={weOffer[1].description}
+                email={weOffer[1].email}
               />
             </div>
           </div>
@@ -67,14 +69,14 @@ const WeOffer = () => {
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
-                headline={sectionsData[2].headline}
-                text={sectionsData[2].description}
-                email={sectionsData[2].email}
+                headline={weOffer[2].headline}
+                text={weOffer[2].description}
+                email={weOffer[2].email}
               />
             </div>
             {/* Col 2  */}
             <div className="order-1 sm:order-2 w-full flex items-center justify-end mdl:pt-16">
-              <SectionImage url={sectionsData[2].imgUrl} />
+              <SectionImage url={weOffer[2].imgUrl} />
             </div>
           </div>
           {/* Item 4  */}
@@ -84,14 +86,14 @@ const WeOffer = () => {
           >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
-              <SectionImage url={sectionsData[3].imgUrl} />
+              <SectionImage url={weOffer[3].imgUrl} />
             </div>
             {/* Col 2  */}
             <div className="order-2 w-full flex items-center justify-end">
               <ContentCard
-                headline={sectionsData[3].headline}
-                text={sectionsData[3].description}
-                email={sectionsData[3].email}
+                headline={weOffer[3].headline}
+                text={weOffer[3].description}
+                email={weOffer[3].email}
               />
             </div>
           </div>
@@ -103,16 +105,16 @@ const WeOffer = () => {
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
-                headline={sectionsData[4].headline}
-                text={sectionsData[4].description}
-                email={sectionsData[4].email}
+                headline={weOffer[4].headline}
+                text={weOffer[4].description}
+                email={weOffer[4].email}
               />
             </div>
             {/* Col 2  */}
             <div className="order-1 sm:order-2 w-full flex items-center justify-end mdl:pt-16">
               <div className="w-full max-w-[50%] vsm:max-w-[50%] sm:max-w-none h-[210px] vsm:h-[240px] sm:h-[230px] md:h-[350px]  flex items-center justify-center relative">
                 <Image
-                  src={sectionsData[4].imgUrl}
+                  src={weOffer[4].imgUrl}
                   alt=""
                   fill
                   className="object-contain"
@@ -127,14 +129,14 @@ const WeOffer = () => {
           >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
-              <SectionImage url={sectionsData[5].imgUrl} />
+              <SectionImage url={weOffer[5].imgUrl} />
             </div>
             {/* Col 2  */}
             <div className="order-2 w-full flex items-center justify-end">
               <ContentCard
-                headline={sectionsData[5].headline}
-                text={sectionsData[5].description}
-                email={sectionsData[5].email}
+                headline={weOffer[5].headline}
+                text={weOffer[5].description}
+                email={weOffer[5].email}
               />
             </div>
           </div>
@@ -146,13 +148,13 @@ const WeOffer = () => {
             {/* Col 1 */}
             <div className="order-2 sm:order-1 w-full max-w-[85%] vsm:max-w-[75%] sm:max-w-none flex flex-col items-start sm:items-center justify-center gap-3">
               <ContentCard
-                headline={sectionsData[6].headline}
-                text={sectionsData[6].description}
+                headline={weOffer[6].headline}
+                text={weOffer[6].description}
               />
             </div>
             {/* Col 2  */}
             <div className="order-1 sm:order-2 w-full flex items-center justify-end mdl:pt-16">
-              <SectionImage url={sectionsData[6].imgUrl} />
+              <SectionImage url={weOffer[6].imgUrl} />
             </div>
           </div>
           {/* Item 8  */}
@@ -162,14 +164,14 @@ const WeOffer = () => {
           >
             {/* Col 1 */}
             <div className="order-1 w-full flex items-center justify-start mdl:pt-16">
-              <SectionImage url={sectionsData[7].imgUrl} />
+              <SectionImage url={weOffer[7].imgUrl} />
             </div>
             {/* Col 2  */}
             <div className="order-2 w-full flex items-center justify-end">
               <ContentCard
-                headline={sectionsData[7].headline}
-                text={sectionsData[7].description}
-                email={sectionsData[7].email}
+                headline={weOffer[7].headline}
+                text={weOffer[7].description}
+                email={weOffer[7].email}
               />
             </div>
           </div>

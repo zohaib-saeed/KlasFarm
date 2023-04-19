@@ -6,13 +6,18 @@ import ActionedEmail from "./ActionedEmail";
 const Contacts = () => {
   return (
     <div className="w-full  pb-10 vsm:pb-12 md:pb-16 lg:pb-24 flex flex-col items-center justify-start gap-10 vsm:gap-12 md:gap-16 lg:gap-24 ">
-      <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
-        <Image
-          src="/images/contacts/wallpaper.png"
-          alt=""
-          fill
-          className="object-cover"
-        />
+      <div className="relative w-full">
+        <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+          <Image
+            src="/images/contacts/wallpaper.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="text-[40px] lg:text-[45px] sxl:text-[50px] mxl:text-[60px] text-white text-shadow-md font-mistral absolute top-[35%] left-[6%]">
+          Kontakty
+        </p>
       </div>
       {/* Contact Cards  */}
       <div className="w-full flex flex-col items-center justify-start max-w-[1440px] px-2 xs:px-3 sm:px-4 md:px-5 mdl:px-6">
