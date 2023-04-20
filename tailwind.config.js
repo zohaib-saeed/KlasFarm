@@ -37,7 +37,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Montserrat", "Helvetica Neue", "Arial", "sans-serif"],
-        mistral: ["mistral-regular", "sans-serif"],
+        mistral: ["Mistral", "sans-serif"],
         // mistral: ["Mistral", "cursive"],
       },
       dropShadow: {
