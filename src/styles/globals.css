@@ -16,11 +16,11 @@ body {
   scroll-behavior: smooth;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Mistral";
   src: url("/fonts/MISTRAL.TTF") format("truetype");
-  /* font-display: swap; */
-}
+  font-display: swap;
+} */
 
 /* Text shadow  */
 .text-shadow-md {
