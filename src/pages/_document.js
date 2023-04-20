@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <style>{`
             @font-face {
               font-family: 'Mistral';
-              src: url('/fonts/MISTRAL.TTF') format('truetype');
+              src: url('/fonts/Mistral.TTF') format('truetype');
               font-display: swap;
             }
             `}</style>
