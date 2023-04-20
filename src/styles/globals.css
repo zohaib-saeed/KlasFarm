@@ -19,6 +19,7 @@ body {
 @font-face {
   font-family: "Mistral";
   src: url("/fonts/MISTRAL.TTF") format("truetype");
+  font-display: swap;
 }
 
 /* Text shadow  */
