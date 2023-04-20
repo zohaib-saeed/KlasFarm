@@ -65,7 +65,7 @@ const AboutUs = () => {
           </div>
           {/* Slide 2  */}
           <div className="relative">
-            <div className="w-full h[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
+            <div className="w-full h-[290px] sm:h-[340px] sxl:h-[370px] mxl:h-[420px] flex items-center justify-center relative">
               <Image
                 src="/images/about-us/carousel-2.png"
                 alt=""
